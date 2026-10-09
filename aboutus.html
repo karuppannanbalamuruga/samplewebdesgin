@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Veganicious</title>
+  </head>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* About Section */
+
+    .about-section {
+        min-height: 100vh;
+        background-color: #cc422f;
+        color: white;
+        padding: 45px 20px;
+        overflow: hidden;
+    }
+
+    /* Heading */
+
+    .about-heading {
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    .about-heading h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        margin-bottom: 14px;
+    }
+
+    .about-heading p {
+        font-size: 14px;
+    }
+
+    /* Main Layout */
+
+    .about-container {
+        max-width: 800px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 165px 165px;
+        column-gap: 55px;
+        row-gap: 0;
+        align-items: center;
+    }
+
+    /* Images */
+
+    .ali-image,
+    .nico-image {
+        position: relative;
+        width: 250px;
+        height: 200px;
+    }
+
+    .ali-image {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    .nico-image {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: center;
+    }
+
+    .ali-image img,
+    .nico-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 2;
+    }
+
+    .ali-image h2,
+    .nico-image h2 {
+        position: absolute;
+        top: 15px;
+        left: -10px;
+        font-family: 'Permanent Marker', cursive;
+        font-size: 21px;
+        z-index: 3;
+    }
+
+    /* Decorative Circles */
+
+    .pink-circle {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: #fbd8d6;
+        border-radius: 50%;
+        right: -40px;
+        bottom: -37px;
+        z-index: 1;
+    }
+
+    .purple-circle {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: #c19acb;
+        border-radius: 50%;
+        top: -16px;
+        right: -29px;
+        z-index: 3;
+    }
+
+    /* Description Text */
+
+    .ali-text {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    .nico-text {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: end;
+        padding-bottom: 5px;
+    }
+
+    .ali-text p,
+    .nico-text p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 650px) {
+        .about-section {
+            padding: 40px 25px;
+        }
+
+        .about-container {
+            max-width: 450px;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 25px;
+        }
+
+        .ali-image,
+        .nico-image {
+            width: 135px;
+            height: 150px;
+        }
+
+        .ali-text p,
+        .nico-text p {
+            font-size: 18px;
+        }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 480px) {
+        .about-heading {
+            margin-bottom: 40px;
+        }
+
+        .about-heading h1 {
+            font-size: 23px;
+        }
+
+        .about-heading p {
+            font-size: 10px;
+            line-height: 1.7;
+        }
+
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .ali-image,
+        .nico-image {
+            width: 180px;
+            height: 180px;
+            align-self: center;
+        }
+
+        .ali-text,
+        .nico-text {
+            width: 100%;
+            max-width: 350px;
+            align-self: center;
+            padding: 0;
+        }
+
+        .ali-text p,
+        .nico-text p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .pink-circle {
+            width: 80px;
+            height: 80px;
+            right: -25px;
+            bottom: -20px;
+        }
+
+        .purple-circle {
+            width: 55px;
+            height: 55px;
+            right: -20px;
+        }
+    }
+  </style>
+  <body>
+    <section class="about-section">
+      <!-- Heading -->
+      <div class="about-heading">
+        <h1>Spreading Vegan Vibes</h1>
+        <p>Hi there, we're Ali and Nico and this is how it all started.</p>
+      </div>
+
+      <div class="about-container">
+        <!-- Ali Section -->
+        <div class="ali-image">
+          <img
+            src="https://images.pexels.com/photos/4253302/pexels-photo-4253302.jpeg"
+            alt="Ali cooking vegan food"
+          />
+          <h2>Ali</h2>
+          <div class="pink-circle"></div>
+        </div>
+
+        <div class="ali-text">
+          <p>
+            Our journey began with a sprinkle of curiosity and a pinch of
+            culinary inspiration. As friends who always found ourselves in the
+            kitchen, we discovered a shared passion for vegan cooking.
+          </p>
+        </div>
+
+        <!-- Nico Section -->
+        <div class="nico-text">
+          <p>
+            We knew we had something special to offer — a way to redefine
+            plant-based cuisine and show the world that it's about so much more
+            than just salads and smoothies. So, armed with our aprons and a dash
+            of determination, we decided to create a YouTube channel that would
+            celebrate the joy of cooking and living compassionately.
+          </p>
+        </div>
+
+        <div class="nico-image">
+          <img
+            src="https://images.pexels.com/photos/4253302/pexels-photo-4253302.jpeg"
+            alt="Nico preparing vegan food"
+          />
+          <h2>Nico</h2>
+          <div class="purple-circle"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+```
